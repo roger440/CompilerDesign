@@ -1,0 +1,17 @@
+    program = (statement ";"| whileStatement | ifStatement ) {statement ";"| whileStatement | ifStatement }
+    statement = declareStatement | assignStatement | readStatement | writeStatement
+    assignStatement = id "=" (bool |int | char | string )
+    declareStatement = "declare" type id
+    readStatement = "readFromKeyboard" "(" id ")"
+    writeStatement = "writeToConsole" "(" id ")"
+    type = "int" | char" | "string" | "flag"
+    relationalOperator = "<" | ">" | "==" | ">=" | "<=" | "!="
+    logicalOperator = "OR" | "AND"
+    whileStatement = "while" "(" checkStatement ")" "do" "{" programStatement "}"
+    ifStatement = "if" "(" checkStatement ")" "{" programStatement "}" [elseStatement]
+    elseStatement = "else" "{" program "}"
+    checkStatement = expression relationalOperator expression
+    expression = term | expression ("+" | "-" ) term
+    term = factor | term ("*" | "/" | "%") factor
+    factor = "(" expression ")" | id
+    comment = "#"{char}

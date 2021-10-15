@@ -1,0 +1,10 @@
+#maximum of 2 numbers read from keyboard
+
+declare int a;
+declare int b;
+
+readFromKeyboard(a);
+readFromKeyboard(b);
+
+if(a>b) {writeToConsole(a);}
+else {writeToConsole(b);}

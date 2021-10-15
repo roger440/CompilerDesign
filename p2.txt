@@ -1,0 +1,18 @@
+#check if at least 2 of 3 numbers are even
+
+declare int a;
+declare int b;
+declare int c;
+
+readFromKeyboard(a);
+readFromKeyboard(b);
+readFromKeyboard(c);
+
+if((a % 2 == 0 && b % 2 == 0) || ( b % 2 == 0 && c % 2 == 0) || (a % 2 == 0 && c % 2 == 0))
+{
+	writeToConsole(true);
+}
+else
+{
+	writeToConsole(false);
+}

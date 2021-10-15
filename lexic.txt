@@ -1,0 +1,33 @@
+Alphabet:
+	a. All the letters (a-zA-Z) of the english alphabet
+	b. Digits (0-9);
+
+Lexic:
+	Symbols:
+		operators:
+				assign : =
+				arithmetic : + - * / % 
+				relational : < > <= >= == !=
+				logical : OR AND
+				separators : ( ) [ ] { } , ;  (whitespace)  (newline)
+		keywords: program declare readFromKeyboard writeToConsole while if else OR AND return 
+
+	Identifiers:
+		seuqence of letters and digits, beginning with a letter, as such:
+	        	letter = "a" | "b" | "c" | ...|"A" | "B" | ... | "Z"
+            		digit = "0" | "1" | ... | "9"
+			identifier = letter | letter {letter | digit}
+	Constants:
+		int
+			int = [-] digitDifferentToZero {digit} | 0
+			digitDifferentToZero = "1" | ... | "9"
+		flag
+			flag = "true" | "false" | "undefined"
+		char
+			char = " " | "_" | 'digit | letter
+		string
+			string = character{character}
+			
+		
+				
+
