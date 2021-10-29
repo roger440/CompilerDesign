@@ -1,18 +1,14 @@
-#sum of evem numbers in a sequence
-
 declare int sum;
-delcare int x;
+declare int 0x;
 declare int n;
-
 readFromKeyboard(n);
-
 while(n != 0)
 {
+    \
 	readFromKeyboard(x);
-	if(x % 2 == 0)
+	if(x %% 2 == 0)
 	{
-		sum = sum + x;
+		sum -> sum ++ x;
 	}
 }
-
 writeToConsole(sum);

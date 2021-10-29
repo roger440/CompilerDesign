@@ -5,9 +5,9 @@ Alphabet:
 Lexic:
 	Symbols:
 		operators:
-				assign : =
-				arithmetic : + - * / % 
-				relational : < > <= >= == !=
+				assign : ->
+				arithmetic : ++ -- ** // %%
+				relational : << >> <= >= == !=
 				logical : OR AND
 				separators : ( ) [ ] { } , ;  (whitespace)  (newline)
 		keywords: program declare readFromKeyboard writeToConsole while if else OR AND return 
