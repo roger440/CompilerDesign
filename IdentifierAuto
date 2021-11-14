@@ -1,0 +1,5 @@
+p,q
+0..9,a..z,A..Z
+p
+p,a..z -> q;p,A..Z -> q;q,a..z -> q;q,A..Z -> q;q,0..9 -> q
+q

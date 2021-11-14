@@ -1,0 +1,11 @@
+First Line : all states
+Second line : alphabet
+Third line : transitions
+Fourth line : final accepted states
+
+The algorithm can read a FiniteAutomata, store it in memory, display all the characteristics and establish whether
+a pattern matches it or not, returning true or false. There is a UI menu which can be used in order to operate it.
+The 2 automata which I wrote should match and replace the Constant and Identifier Regex
+They iterate through the string given and if at some point we cannot find a transition for which we advance,
+it returns false. If it reaches the end and the state is among the accepted states, it returns true
+If it doesnt't find the current state in the final states, it returns false
