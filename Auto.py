@@ -68,10 +68,8 @@ class Automata:
             ok = False
             for transition in self.transitions:
                 if letter in transition.cost and transition.first == current_state:
-                    print(transition.first,transition.second,transition.cost)
                     ok = True
                     current_state = transition.second
             if not ok:
                 return False
-        print(current_state)
         return current_state in self.finalStates

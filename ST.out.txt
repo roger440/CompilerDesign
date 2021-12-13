@@ -1,5 +1,6 @@
 Chain 0
 ->
+2 ,pos=3
 
 Chain 1
 ->
@@ -26,7 +27,9 @@ a ,pos=0
 Chain 8
 ->
 b ,pos=1
+0 ,pos=4
 
 Chain 9
 ->
+c ,pos=2
 

@@ -1,5 +1,6 @@
 from ST import Table
 from helpers import *
+from Auto import *
 import re
 class Scanner:
     def __init__(self, input_file, st_table, pif_table):
@@ -9,7 +10,10 @@ class Scanner:
         self.reserved = get_reserved()
         self.ST = Table()
         self.PIF = []
-
+        self.constant_auto = Automata()
+        self.identifier_auto = Automata()
+        self.constant_auto.read("ConstantAuto")
+        self.identifier_auto.read("IdentifierAuto")
     def write_to_files(self):
 
         with open(self.st_table_file,'w') as f:
@@ -45,11 +49,11 @@ class Scanner:
                         if token in reserved:
                             self.PIF.append([token, -1])
 
-                        elif is_identifier(token):
+                        elif self.identifier_auto.is_accepted(token):
                             pos=self.ST.add(token)
                             self.PIF.append([token,pos])
 
-                        elif is_constant(token):
+                        elif self.constant_auto.is_accepted(token):
                             pos=self.ST.add(token)
                             self.PIF.append(["constant", pos])
 
